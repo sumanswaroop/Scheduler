@@ -1,0 +1,38 @@
+---------------------------------------------------
+RunTime Complexity : 
+
+----------------------------------------------------
+Four programs to test
+
+testmyscheduler.c : to fork child process
+
+cpu.c :  CPU Bound program
+
+cpu-print.c : Extensive use of I/O device
+
+disk1.c : disk read bound
+
+
+----------------------------------------------------
+Modifications:
+
+1)For System Call:
+	proc.c
+		set default value for prior
+	proc.h
+		added a extra variable prior in struct proc
+	sysproc.c 
+		added the implementation of setprio and getprio
+	syscall.h 
+		define the position of the system call vector that connect to your implementation
+	user.h 
+		define the function that can be called through the shell
+	syscall.c 
+		external define the function that connect the shell and the kernel, use the position defined in syscall.h to add the function to the system call vector
+	usys.S 
+		use the macro to define connect the call of user to the system call function
+
+2)
+	
+	
+
